@@ -1,0 +1,130 @@
+/* styles.css */
+ody {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Это сделает, чтобы контейнер занимал всю высоту видимой области страницы */
+  margin: 0;
+}
+
+#app {
+  text-align: center;
+  padding: 20px;
+}
+
+#pokemon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-card {
+  border: 2px solid #ccc;
+  width: 140px;
+  height: 140px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pokemon-card img {
+  width: 120px;
+  height: 120px;
+}
+
+.poke-info-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.poke-info-content {
+  width: 400px;
+  border: 2px solid #000;
+  margin: 50px 10px 0;
+}
+
+.poke-info-content img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.poke-info-content div {
+  font-size: 22px;
+  text-align: center;
+}
+.battle-div {
+  width: 200px; /* Изменено на 200px */
+  text-align: center;
+}
+
+.battle-button {
+  width: 100px; /* Изменено на 100px */
+  height: 50px;
+  font-size: 25px;
+  background-color: #FF4500; /* Темно-оранжевый цвет */
+  border: 2px solid #8B0000; /* Темно-красная граница */
+  cursor: pointer;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.poke-info-content.fade-out {
+  animation: fadeOut 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.winner-label, .battle-description {
+  animation: fadeIn 2s;
+}
+
+.winner-label {
+  font-size: 40px;
+  color: #8B0000; /* Темно-красный цвет */
+}
+
+.reset-section {
+  text-align: center;
+}
+
+.reset-button {
+  display: none;
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #008CBA; /* Цвет кнопки */
+  color: #fff; /* Цвет текста */
+  border: none;
+  border-radius: 5px;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0; /* Цвет фона подвала */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
